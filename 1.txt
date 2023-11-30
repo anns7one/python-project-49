@@ -1,5 +1,0 @@
-Welcome to the Brain Games!
-May I have your name? Hello, Tirion!
-Answer 'yes' if the number is even,otherwise answer 'no'.
-Question: 30
-Your answer:

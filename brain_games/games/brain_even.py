@@ -14,12 +14,11 @@ def wrong_answer_message(user_answer, correct_answer, user_name):
 
 def main():
     user = welcome_user()
-    print("Answer \"yes\" if the number is even,"
-          "otherwise answer \"no\".")
     correct_answers_count = 0
     answers_count = 0
     while answers_count < 3:
         question_number = random.randint(1, 100)
+        print('Answer "yes" if the number is even, otherwise answer "no".')
         print(f"Question: {question_number}")
         user_answer = input("Your answer: ")
         correct_answer = 'yes' if is_even(question_number) else 'no'
