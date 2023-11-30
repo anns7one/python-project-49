@@ -3,6 +3,12 @@ import math
 import random
 
 
+def wrong_answer_message(user_answer, correct_answer, user_name):
+    print(f"'{user_answer}' is wrong answer ;(. "
+          f"Correct answer was '{correct_answer}'.\n"
+          f"Let's try again, {user_name}!")
+
+
 def main():
     user = welcome_user()
     print("Find the greatest common divisor of given numbers.")
@@ -17,9 +23,7 @@ def main():
             print("Correct!")
             correct_answers_count += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again! {user}")
+            wrong_answer_message(user_answer, correct_answer, user)
             break
     if correct_answers_count == 3:
         print(f"Congratulations, {user}!")

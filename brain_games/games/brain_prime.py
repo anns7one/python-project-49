@@ -9,12 +9,17 @@ def is_prime(num):
     return True
 
 
+def wrong_answer_message(user_answer, correct_answer, user):
+    print(f"'{user_answer}' is wrong answer ;(. "
+          f"Correct answer was '{correct_answer}'.\n"
+          f"Let's try again, {user}!")
+
+
 def main():
     user = welcome_user()
     print("Answer 'yes' if given number is prime. Otherwise answer 'no'.")
-    answers_count = 0
     correct_answers_count = 0
-    while answers_count < 3:
+    while correct_answers_count < 3:
         num = random.randint(1, 3571)
         print(f"Question: {num}")
         user_answer = input("Your answer: ")
@@ -24,12 +29,10 @@ def main():
             correct_answers_count += 1
         else:
             correct_answer = 'yes' if is_prime(num) else 'no'
-            print(f"'{user_answer}' is wrong answer ;(."
-                  f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again! {user}")
-        answers_count += 1
+            print(wrong_answer_message(user_answer, correct_answer, user))
+            break
     if correct_answers_count == 3:
-        print(f"Congradulations! {user}")
+        print(f"Congratulations, {user}!")
 
 
 if __name__ == "__main__":
