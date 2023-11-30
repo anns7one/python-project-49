@@ -23,7 +23,7 @@ def main():
             print(f"Let's try again! {user}")
         answers_count += 1
     if correct_answers_count == 3:
-        print(f"Congradulations! {user}")
+        print(f"Congratulations, {user}!")
 
 
 if __name__ == "__main__":
