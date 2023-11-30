@@ -14,8 +14,8 @@ def wrong_answer_message(user_answer, correct_answer, user_name):
 
 def main():
     user = welcome_user()
-    print("Answer 'yes' if the number is even,"
-          "otherwise answer 'no'.")
+    print("Answer \"yes\" if the number is even,"
+          "otherwise answer \"no\".")
     correct_answers_count = 0
     answers_count = 0
     while answers_count < 3:
