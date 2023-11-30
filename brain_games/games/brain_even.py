@@ -15,8 +15,7 @@ def wrong_answer_message(user_answer, correct_answer, user_name):
 def main():
     user = welcome_user()
     correct_answers_count = 0
-    answers_count = 0
-    while answers_count < 3:
+    while correct_answers_count < 3:
         question_number = random.randint(1, 100)
         print('Answer "yes" if the number is even, otherwise answer "no".')
         print(f"Question: {question_number}")
@@ -27,7 +26,7 @@ def main():
             correct_answers_count += 1
         else:
             wrong_answer_message(user_answer, correct_answer, user)
-        answers_count += 1
+            break
     if correct_answers_count == 3:
         print(f"Congratulations, {user}!")
 
