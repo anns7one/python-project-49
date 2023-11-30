@@ -29,7 +29,7 @@ def main():
             wrong_answer_message(user_answer, correct_answer, user)
         answers_count += 1
     if correct_answers_count == 3:
-        print(f"Congratulations, {user}")
+        print(f"Congratulations, {user}!")
 
 
 if __name__ == "__main__":
