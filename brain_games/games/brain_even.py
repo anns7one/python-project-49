@@ -6,17 +6,19 @@ def is_even(number):
     return number % 2 == 0
 
 
-def wrong_answer_message(user_answer, correct_answer):
+def wrong_answer_message(user_answer, correct_answer, user_name):
     print(f"'{user_answer}' is wrong answer ;(. "
-          f"Correct answer was '{correct_answer}'.")
+          f"Correct answer was '{correct_answer}'.\n"
+          f"Let's try again, {user_name}!")
 
 
 def main():
-    welcome_user()
+    user = welcome_user()
     print("Answer 'yes' if the number is even,"
           "otherwise answer 'no'.")
     correct_answers_count = 0
-    while correct_answers_count < 3:
+    answers_count = 0
+    while answers_count < 3:
         question_number = random.randint(1, 100)
         print(f"Question: {question_number}")
         user_answer = input("Your answer: ")
@@ -25,10 +27,10 @@ def main():
             print("Correct!")
             correct_answers_count += 1
         else:
-            wrong_answer_message(user_answer, correct_answer)
-            print("Let's try again!")
-    print("Congratulations!"
-          "You've answered correctly 3 times.")
+            wrong_answer_message(user_answer, correct_answer, user)
+        answers_count += 1
+    if correct_answers_count == 3:
+        print(f"Congradulations! {user}")
 
 
 if __name__ == "__main__":
