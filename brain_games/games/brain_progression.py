@@ -23,7 +23,8 @@ def main():
             index_colon = random.randint(0, len(result) - 1)
         correct_result = result[index_colon]
         result[index_colon] = '..'
-        print(' '.join(result))
+        question_string = f"Question: {' '.join(result)}"
+        print(question_string)
         result.clear()
         user_answer = int(input("Your answer: "))
         if user_answer == int(correct_result):
