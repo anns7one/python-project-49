@@ -17,9 +17,9 @@ def wrong_answer_message(user_answer, correct_answer, user):
 
 def main():
     user = welcome_user()
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no'.")
     correct_answers_count = 0
     while correct_answers_count < 3:
+        print("Answer 'yes' if given number is prime. Otherwise answer 'no'.")
         num = random.randint(1, 3571)
         print(f"Question: {num}")
         user_answer = input("Your answer: ")
